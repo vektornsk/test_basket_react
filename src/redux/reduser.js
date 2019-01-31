@@ -44,12 +44,9 @@ let initialStore = {
 };
 
 let changeBasket = (state = initialStore, action) => {
-    // debugger;
     switch (action.type) {
         case 'CHANCE_PRODUCT_BASKET':
-            return Object.assign({}, state, {
-                productList: action.payload
-            });
+            return {...state, productList: action.payload}
 
         default:
             return state;
