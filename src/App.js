@@ -88,7 +88,11 @@ class App extends Component {
 
     componentDidMount() {
         let productList = JSON.parse(localStorage.getItem('products'));
-        this.setState({productList});
+
+        if(productList) {
+            this.setState({productList});
+        }
+
     }
 
     render() {
